@@ -433,7 +433,7 @@ app.get("/", (req, res)=>{
     res.send(data)
   })
 })
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3030;
 server.listen(port, ()=>{
     console.log(`your server is running on port ${port}`)
 })
