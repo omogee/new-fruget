@@ -24,7 +24,7 @@ const options = {
     acquireTimeout  : 60 * 60 * 1000,
     timeout         : 60 * 60 * 1000,
 
-    host: 'localhost',
+    host: '127.0.0.1',
     user: 'root',
     //b9b001ef539d5b 
     password: 'password',
