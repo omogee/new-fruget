@@ -70,7 +70,7 @@ function MyStoreProduct(props) {
      useEffect(()=>{
             setcurrentPage("storeproducts")
             //store=${escape(props.store)}
-        //   axios.get(`https://new-frugetbackend-production.up.railway.app/item/fetch_my_storeproducts?storeId=${selectedstoreId || query.get("storeId") || "null"}&page=${page}&tkt=${Cookies.get("tktplc")}`)
+        //   axios.get(`https://new-frugetbackend-productions.up.railway.app/item/fetch_my_storeproducts?storeId=${selectedstoreId || query.get("storeId") || "null"}&page=${page}&tkt=${Cookies.get("tktplc")}`)
         //   .then(res => {
         //     setTimeout(()=> setloading(false), 700)
         //       setstoreproducts(res.data.products)
@@ -171,7 +171,7 @@ const editchanges =(data)=>{
     console.log(newquantity, newprice, data.stock, data.sellingprice)
     if((newquantity !== data.stock && newquantity.length > 0) || (newprice !== data.sellingprice && newprice !== 0)){
         setloading(true)
-        axios.get(`https://new-frugetbackend-production.up.railway.app/client/update_store_quantity_and_price?quantity=${newquantity}&price=${parseInt(newprice)}&tkt=${Cookies.get("tktplc")}&productId=${data.productId}&storeId=${query.get("store")}`)
+        axios.get(`https://new-frugetbackend-productions.up.railway.app/client/update_store_quantity_and_price?quantity=${newquantity}&price=${parseInt(newprice)}&tkt=${Cookies.get("tktplc")}&productId=${data.productId}&storeId=${query.get("store")}`)
     .then(res =>{
         if(res.data.status === "success"){
             setalertmessage(res.data.message)

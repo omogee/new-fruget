@@ -34,7 +34,7 @@ function Home() {
 // },[])
  useEffect(()=>{
  setloading(true)
-  axios.get(`https://new-frugetbackend-production.up.railway.app/item/fetch_trends`)
+  axios.get(`https://new-frugetbackend-productions.up.railway.app/item/fetch_trends`)
   .then(res => {
     setTrends(res.data.trends)
     settopsearched(res.data.topsearched)

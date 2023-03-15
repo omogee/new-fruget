@@ -15,7 +15,7 @@ function History(props) {
  useEffect(()=>{
     setcurrentPage("history")
     if(Cookies.get("tktplc")){
-    axios.get(`https://new-frugetbackend-production.up.railway.app/client/fetch_history?tkt=${Cookies.get("tktplc")}`)
+    axios.get(`https://new-frugetbackend-productions.up.railway.app/client/fetch_history?tkt=${Cookies.get("tktplc")}`)
     .then(res =>{
         if(res.data.status === "success"){
          sethistory(res.data.history)

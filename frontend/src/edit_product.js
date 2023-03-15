@@ -24,7 +24,7 @@ const EditProduct =()=>{
     const params = useParams()
     useEffect(()=>{
         setloading(true)
-        axios.get(`https://new-frugetbackend-production.up.railway.app/item/fetch_productdetails?productId=${params.productId}&storeId=${params.storeId}`)
+        axios.get(`https://new-frugetbackend-productions.up.railway.app/item/fetch_productdetails?productId=${params.productId}&storeId=${params.storeId}`)
         .then(res =>{
             if(res.data.status === "success"){
             setproductdetails(res.data.product[0])
@@ -164,7 +164,7 @@ const formdata = new FormData();
       }
   }
   
-  axios.post(`https://new-frugetbackend-production.up.railway.app/products/seller/productupload`, formdata, config)
+  axios.post(`https://new-frugetbackend-productions.up.railway.app/products/seller/productupload`, formdata, config)
     .then(res => {
         if(res.data.failure){
            // this.setState({Message:res.data.message,displayMessage:"block"})
